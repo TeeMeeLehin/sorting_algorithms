@@ -1,48 +1,6 @@
 #include "sort.h"
 
 /**
-swap_func - function to swap two nodes of a 
-* doubly linked list
-* @list: the doubly linked list
-* @first: first node
-* @second: second node
-* Return: void
-*/
-void swap_func(listint_t **list, listint_t *first, listint_t *second)
-{
-listint_t *b4_first, *afta_sec;
-
-if (!first || !second)
-{
-return;
-}
-
-b4_first = first->prev;
-afta_sec = second->next;
-
-first->next = afta_sec;
-second->prev = b4_first;
-first->prev = second;
-second->next = first;
-
-if (!b4_first)
-{
-*list = second;
-}
-else
-{
-b4_first->next = second;
-}
-
-if(afta_sec)
-{
-afta_sec->prev = first;
-}
-
-return;
-}
-
-/**
 * insertion_sort_list - sorting a list using the
 * insertion sort algorithm
 * @list: doubly linked list to be sorted
