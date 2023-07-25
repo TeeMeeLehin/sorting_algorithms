@@ -25,7 +25,7 @@ if (min != i)
 temp = array[i];
 array[i] = array[min];
 array[min] = temp;
-}
 print_array((const int *)array, size);
+}
 }
 }
