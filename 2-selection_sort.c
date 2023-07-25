@@ -13,7 +13,6 @@ int temp;
 for (i = 0; i < size - 1; i++)
 {
 min = i;
-
 for (j = i + 1; j < size; j++)
 {
 if (array[j] < array[min])
@@ -30,4 +29,3 @@ array[min] = temp;
 print_array((const int *)array, size);
 }
 }
-
